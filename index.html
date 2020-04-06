@@ -1,1 +1,18 @@
-
+<!doctype html>
+<html>
+ <head>
+  </head>
+  <body>
+ <center>
+   <h1 id="txt"></h1>
+   <button onclick="score()">PRESS</button></center>
+    <script>
+      var score = 0;
+      document.getelementbyid('txt').innerhtml = score;
+      function score(){
+        x=x+1;
+       document.getelementbyid('txt').innerhtml = score;
+      }
+    </script>
+  </body>
+</html>
