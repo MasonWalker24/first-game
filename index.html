@@ -3,13 +3,14 @@ function update(){
 
 document.getElementById('text').value = corncount;
  document.getElementById('priceofauto').innerHTML = (autoclick + 1) * 12 + " cookies";
+ document.getElementById('priceoffarmer').innerHTML = (oldfarmer + 1) * 200 + " cookies";
 }
 var corncount = 0;
 var autoclick = 0;
 var oldfarmer = 0;
 function timer(){
 
-corncount = corncount + autoclick;
+corncount = corncount + autoclick + (oldfarmer * 5);
 update()
 }
 setInterval(timer, 1000)
@@ -37,8 +38,19 @@ candycorn.
 <button onClick="buyautoclick()">buy Autoclick</button>
  <br><br>
  <p id="priceofauto">cookies</p>
+ <button onClick="buyoldfarmer()">buy old farmer</button>
+ <p id="priceoffarmer">cookies</p>
 </center>
 <script>
+ 
+ function buyoldfarmer(){
+  if (corncount >= ((oldfarmer + 1) * 200)){
+
+corncount = corncount - ((oldfarmer + 1) * 20);
+
+oldfarmer = oldfarmer + 1;
+update()
+ }
 
 function buyautoclick(){
 
