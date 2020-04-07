@@ -12,7 +12,7 @@ function timer(){
 potatocount = potatocount + autoclick;
 update()
 }
-setInterval(timer, 1000)
+setInterval(timer, 10)
 </script>
 <html>
 <head>
@@ -46,7 +46,7 @@ if (potatocount >= ((autoclick + 1) * 12)){
 
 potatocount = potatocount - ((autoclick + 1) * 12);
 
-autoclick = autoclick + 1;
+autoclick = autoclick + .01;
 update()
 
 }
