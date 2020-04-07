@@ -1,15 +1,15 @@
 <script>
 function update(){
 
-document.getElementById('text').value = potatocount;
+document.getElementById('text').value = corncount;
  document.getElementById('priceofauto').innerHTML = (autoclick + 1) * 12 + " cookies";
 }
-var potatocount = 0;
+var corncount = 0;
 var autoclick = 0;
 var oldfarmer = 0;
 function timer(){
 
-potatocount = potatocount + autoclick;
+corncount = corncount + autoclick;
 update()
 }
 setInterval(timer, 1000)
@@ -25,11 +25,11 @@ you have:
 <input type="text" id="text" disabled style = text-align:center>
 <script>
 function add(){
- potatocount = potatocount + 1
+ corncount = corncount + 1
 update()
 }
 </script>
-potatoes.
+candycorn.
 <br><br>
 <button onclick="save()">save</button>
 <button onclick="load()">load</button>
@@ -42,9 +42,9 @@ potatoes.
 
 function buyautoclick(){
 
-if (potatocount >= ((autoclick + 1) * 12)){
+if (corncount >= ((autoclick + 1) * 12)){
 
-potatocount = potatocount - ((autoclick + 1) * 12);
+corncount = corncount - ((autoclick + 1) * 12);
 
 autoclick = autoclick + 1;
 update()
@@ -54,15 +54,15 @@ update()
 }
 function save(){
 
-localstorage.setItem("potatocount", potatocount);
+localstorage.setItem("corncount", corncount);
 
 }
 
 function load(){
 
-moneycount = localstorage.getItem("potatocount");
-moneycount = parseInt(potatocount);
-document.getElementById('text').value = potatocount;
+corncount = localstorage.getItem("corncount");
+corncount = parseInt(corncount);
+document.getElementById('text').value = corncount;
 }
 </script>
 </body>
