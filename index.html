@@ -1,22 +1,8 @@
 <script>
- var clickcount=0;
- function crazyclick(){
-  document.getElementById("crazyclick").style.visibility="visible";
-  alert("you got the crazy click achievment");
- }
- 
- window.addEventListener('load', 
-  function() { 
-    document.getElementById("crazyclick").style.visibility="hidden";
-  }
- 
 function update(){
 
 document.getElementById('text').value = potatocount;
  document.getElementById('priceofauto').innerHTML = (autoclick + 1) * 12 + " cookies";
-  if (clickcount >= 100){
-   crazyclick()
-  }
 }
 var potatocount = 0;
 var autoclick = 0;
@@ -32,8 +18,7 @@ setInterval(timer, 1000)
 <head>
 
 </head>
-<body style="background-color:powderblue;">
- <img src="crazyclick.jpg" id="crazyclick" align="right">
+<body >
 <center><a href=# onclick="add()"><img src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F3%2F8%2F5%2F1%2F11949847171968921680potato_nicu_buculei_01.svg.med.png&imgrefurl=http%3A%2F%2Fwww.clker.com%2Fclipart-2532.html&tbnid=5fxIVnNvhBZb0M&vet=12ahUKEwjCwa_Tm9XoAhXZQTABHRkHDGsQMygKegUIARDBAg..i&docid=As5Km6oIrYpO1M&w=300&h=244&q=animated%20potato&ved=2ahUKEwjCwa_Tm9XoAhXZQTABHRkHDGsQMygKegUIARDBAg"></img></a>
 <br><br>
 you have:
@@ -41,7 +26,6 @@ you have:
 <script>
 function add(){
  potatocount = potatocount + 1
- clickcount = clickcount + 1
 update()
 }
 </script>
