@@ -2,12 +2,12 @@
 function update(){
 
 document.getElementById('text').value = potatocount;
- document.getElementById('priceofauto').value = (autoclick + 1) * 12;
+ document.getElementById('priceofauto').value = costofauto;
 }
 var potatocount = 0;
 var autoclick = 0;
 var oldfarmer = 0;
-
+var costofauto = (autoclick + 1) * 12;
 function timer(){
 
 potatocount = potatocount + autoclick;
